@@ -27,8 +27,8 @@ class Details extends Component{
     const details = []
 
     Object.entries(detailsMap).forEach((item) => {
-      let detailTitle = item[0].replace('_',' ');
-      let detailValue = item[1];
+      let detailTitle = String(item[0]).replace('_',' ');
+      let detailValue = String(item[1]);
       if (detailValue.toString().match(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/)){
         detailValue = <a href={detailValue}> Click Here </a>
       }

@@ -49,30 +49,47 @@ class App extends Component {
             id: cat.id,
           });
         });
-      }).finally(() => {this.handleOnClick()});
+      })
+      .then(() => {this.fetchImages()});
+  }
+
+  /**
+   * Fetch all the images for the corresponding data.
+   */
+  fetchImages(){
+    this.state.data.forEach((cat, index) => {
+      fetch("https://api.thecatapi.com/v1/images/search?breed_ids="+cat.id)
+        .then(res => res.json())
+        .then((data) => {
+          if (data && data.length > 0){
+            cat.image = data[0].url ? data[0].url : '/images/no-image.png';
+          } else {
+            cat.image = '/images/no-image.png';
+          }
+        })
+        .then(() => {
+          if (index >= this.state.data.length -1) this.handleOnClick();
+        });
+    });
   }
 
   /**
    * OnClick handler for the next button in the application.
-   * Generates a random index and uses that to select the data,
-   * as well as fetch the correct remote image based on the id.
+   * Generates a random index and uses that to select the data.
    */
   handleOnClick(){
     let randomIndex = Math.floor(Math.random() * (this.state.data.length-1));
     let state = this.state;
-    let details = this.state.data[randomIndex];
+    let data = this.state.data.slice();
+    let details = data[randomIndex];
+    state.image = details.image;
 
-    /*
-     * Could not get my API to get request the data + all images in one go so I have to fetch images each time
-     * a new cat is selected from the data.
-     */
-    fetch("https://api.thecatapi.com/v1/images/search?breed_ids="+details.id)
-      .then(res => res.json())
-      .then((data) => {
-        state.details = details;
-        state.image = data[0].url;
-        this.setState(state);
-      });
+    // Hiding the properties from the details we don't want to show
+    delete details.image;
+    delete details.id;
+
+    state.details = details;
+    this.setState(state);
   }
 
   /**
