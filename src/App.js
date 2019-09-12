@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Header from './header.js';
+import Body from './body';
+import Details from "./details";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  handleOnClick(){
+    alert('Clicked');
+  }
+
+  render() {
+    let test = {
+      test1: "not test",
+      test2: "yes test",
+      test3: "ok"
+    };
+
+    return (
+      <div>
+        <Header onClick={() => this.handleOnClick()}/>
+        <div className="container mx-auto">
+          <div className="row">
+            <div className="col-sm">
+              <Body imageSrc="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct"/>
+            </div>
+            <div className="col-sm">
+              <Details details={test}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
