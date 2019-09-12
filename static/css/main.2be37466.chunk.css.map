@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,cACE,oCAAuC,CACvC,iBACF,CAEA,WACE,UACF,CAEA,KACE,sEACF","file":"main.2be37466.chunk.css","sourcesContent":[".container-bg {\n  background-color: rgba(220,220,220,0.7);\n  border-radius: 5px;\n}\n\n.app-image {\n  width: 100%;\n}\n\nbody{\n  background-image: url(\"app-resources/background.jpg\");\n}\n"]}
