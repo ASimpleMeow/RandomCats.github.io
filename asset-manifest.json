@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/RandomCats/static/css/main.2be37466.chunk.css",
-    "main.js": "/RandomCats/static/js/main.afd9da24.chunk.js",
-    "main.js.map": "/RandomCats/static/js/main.afd9da24.chunk.js.map",
-    "runtime~main.js": "/RandomCats/static/js/runtime~main.57cf0b32.js",
-    "runtime~main.js.map": "/RandomCats/static/js/runtime~main.57cf0b32.js.map",
-    "static/js/2.01e6883c.chunk.js": "/RandomCats/static/js/2.01e6883c.chunk.js",
-    "static/js/2.01e6883c.chunk.js.map": "/RandomCats/static/js/2.01e6883c.chunk.js.map",
-    "index.html": "/RandomCats/index.html",
-    "precache-manifest.be9cb06694b31a5344a22e466e59b3c2.js": "/RandomCats/precache-manifest.be9cb06694b31a5344a22e466e59b3c2.js",
-    "service-worker.js": "/RandomCats/service-worker.js",
-    "static/css/main.2be37466.chunk.css.map": "/RandomCats/static/css/main.2be37466.chunk.css.map",
-    "static/media/index.css": "/RandomCats/static/media/background.71cf9171.jpg"
+    "main.css": "/RandomCats.github.io/static/css/main.0cb67e80.chunk.css",
+    "main.js": "/RandomCats.github.io/static/js/main.afd9da24.chunk.js",
+    "main.js.map": "/RandomCats.github.io/static/js/main.afd9da24.chunk.js.map",
+    "runtime~main.js": "/RandomCats.github.io/static/js/runtime~main.b0984f6b.js",
+    "runtime~main.js.map": "/RandomCats.github.io/static/js/runtime~main.b0984f6b.js.map",
+    "static/js/2.01e6883c.chunk.js": "/RandomCats.github.io/static/js/2.01e6883c.chunk.js",
+    "static/js/2.01e6883c.chunk.js.map": "/RandomCats.github.io/static/js/2.01e6883c.chunk.js.map",
+    "index.html": "/RandomCats.github.io/index.html",
+    "precache-manifest.869a0e65a9a7da417b9001a243ef1a80.js": "/RandomCats.github.io/precache-manifest.869a0e65a9a7da417b9001a243ef1a80.js",
+    "service-worker.js": "/RandomCats.github.io/service-worker.js",
+    "static/css/main.0cb67e80.chunk.css.map": "/RandomCats.github.io/static/css/main.0cb67e80.chunk.css.map",
+    "static/media/index.css": "/RandomCats.github.io/static/media/background.71cf9171.jpg"
   }
 }
