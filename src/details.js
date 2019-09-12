@@ -1,11 +1,25 @@
 import React, {Component} from 'react';
 
 class Details extends Component{
+
+  toTitleCase(text){
+    return text
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
   showDetails(detailsMap){
     const details = []
-    for (const [detail, value] of Object.entries(detailsMap)) {
-      details.push(<p className="text-left"><b>{detail}</b>: {value}</p>)
-    }
+    Object.entries(detailsMap).forEach((item) => {
+      let detailTitle = item[0].replace('_',' ');
+      let detailValue = item[1];
+      if (item[1].toString().match(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/)){
+        detailValue = <a href={item[1]}> Click Here </a>
+      }
+      details.push(<p className="text-left"><b>{this.toTitleCase(detailTitle)}</b>: {detailValue}</p>)
+    });
 
     return (
       <div>

@@ -1,8 +1,12 @@
 .container-bg {
-  background-color: rgba(100,100,100,0.2);
+  background-color: rgba(220,220,220,0.7);
   border-radius: 5px;
 }
 
 .app-image {
   width: 100%;
+}
+
+body{
+  background-image: url("app-resources/background.jpg");
 }
